@@ -23,10 +23,10 @@
 		9B07AC36197649CE00C02217 /* BirdDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AC31197649CE00C02217 /* BirdDown.png */; };
 		9B07AC37197649CE00C02217 /* BirdUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AC32197649CE00C02217 /* BirdUp.png */; };
 		9B07AC38197649CE00C02217 /* GameBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AC33197649CE00C02217 /* GameBack.png */; };
-		9B07AC39197649CE00C02217 /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AC34197649CE00C02217 /* MainMenu.png */; };
 		9B07AC3A197649CE00C02217 /* Tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AC35197649CE00C02217 /* Tunnel.png */; };
 		9B07AC4019764D1200C02217 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AC3F19764D1200C02217 /* GameViewController.m */; };
 		9B07AC4C197676C500C02217 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AC4B197676C500C02217 /* MenuController.m */; };
+		9B08A46719801F1100044F18 /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B08A46619801F1100044F18 /* MainMenu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,12 +60,12 @@
 		9B07AC31197649CE00C02217 /* BirdDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BirdDown.png; sourceTree = "<group>"; };
 		9B07AC32197649CE00C02217 /* BirdUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BirdUp.png; sourceTree = "<group>"; };
 		9B07AC33197649CE00C02217 /* GameBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBack.png; sourceTree = "<group>"; };
-		9B07AC34197649CE00C02217 /* MainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenu.png; sourceTree = "<group>"; };
 		9B07AC35197649CE00C02217 /* Tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tunnel.png; sourceTree = "<group>"; };
 		9B07AC3E19764D1200C02217 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		9B07AC3F19764D1200C02217 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		9B07AC4A197676C500C02217 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuController.h; path = ../MenuController.h; sourceTree = "<group>"; };
 		9B07AC4B197676C500C02217 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuController.m; path = ../MenuController.m; sourceTree = "<group>"; };
+		9B08A46619801F1100044F18 /* MainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +141,10 @@
 		9B07AC03197648A800C02217 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B08A46619801F1100044F18 /* MainMenu.png */,
 				9B07AC31197649CE00C02217 /* BirdDown.png */,
 				9B07AC32197649CE00C02217 /* BirdUp.png */,
 				9B07AC33197649CE00C02217 /* GameBack.png */,
-				9B07AC34197649CE00C02217 /* MainMenu.png */,
 				9B07AC35197649CE00C02217 /* Tunnel.png */,
 				9B07AC04197648A800C02217 /* FlappyBird-Info.plist */,
 				9B07AC05197648A800C02217 /* InfoPlist.strings */,
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B07AC36197649CE00C02217 /* BirdDown.png in Resources */,
-				9B07AC39197649CE00C02217 /* MainMenu.png in Resources */,
+				9B08A46719801F1100044F18 /* MainMenu.png in Resources */,
 				9B07AC37197649CE00C02217 /* BirdUp.png in Resources */,
 				9B07AC3A197649CE00C02217 /* Tunnel.png in Resources */,
 				9B07AC15197648A800C02217 /* Images.xcassets in Resources */,
@@ -483,6 +483,7 @@
 				9B07AC2D197648A800C02217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B07AC2E197648A800C02217 /* Build configuration list for PBXNativeTarget "FlappyBirdTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +492,7 @@
 				9B07AC30197648A800C02217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B08A4691980215C00044F18 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B08A4681980215C00044F18 /* Menu.png */; };
 		9B156A6519776EA400C6F5AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B156A6419776EA400C6F5AB /* Foundation.framework */; };
 		9B156A6719776EA400C6F5AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B156A6619776EA400C6F5AB /* CoreGraphics.framework */; };
 		9B156A6919776EA400C6F5AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B156A6819776EA400C6F5AB /* UIKit.framework */; };
@@ -24,7 +25,6 @@
 		9B156A9E19776FA300C6F5AB /* bluemonter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B156A9919776FA300C6F5AB /* bluemonter.png */; };
 		9B156A9F19776FA300C6F5AB /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B156A9A19776FA300C6F5AB /* bullet.png */; };
 		9B156AA019776FA300C6F5AB /* greenmonter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B156A9B19776FA300C6F5AB /* greenmonter.png */; };
-		9B156AA119776FA300C6F5AB /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B156A9C19776FA300C6F5AB /* Menu.png */; };
 		9B156AA219776FA300C6F5AB /* yellowmonter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B156A9D19776FA300C6F5AB /* yellowmonter.png */; };
 		9B156AA419776FAD00C6F5AB /* aircraft.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B156AA319776FAD00C6F5AB /* aircraft.png */; };
 		9B156AA7197773E900C6F5AB /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B156AA6197773E900C6F5AB /* GameController.m */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B08A4681980215C00044F18 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
 		9B156A6119776EA400C6F5AB /* SpaceInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B156A6419776EA400C6F5AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9B156A6619776EA400C6F5AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +64,6 @@
 		9B156A9919776FA300C6F5AB /* bluemonter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluemonter.png; sourceTree = "<group>"; };
 		9B156A9A19776FA300C6F5AB /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		9B156A9B19776FA300C6F5AB /* greenmonter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenmonter.png; sourceTree = "<group>"; };
-		9B156A9C19776FA300C6F5AB /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
 		9B156A9D19776FA300C6F5AB /* yellowmonter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowmonter.png; sourceTree = "<group>"; };
 		9B156AA319776FAD00C6F5AB /* aircraft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aircraft.png; sourceTree = "<group>"; };
 		9B156AA5197773E900C6F5AB /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameController.h; path = ../GameController.h; sourceTree = "<group>"; };
@@ -143,11 +143,11 @@
 		9B156A6B19776EA400C6F5AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B08A4681980215C00044F18 /* Menu.png */,
 				9B156AA319776FAD00C6F5AB /* aircraft.png */,
 				9B156A9919776FA300C6F5AB /* bluemonter.png */,
 				9B156A9A19776FA300C6F5AB /* bullet.png */,
 				9B156A9B19776FA300C6F5AB /* greenmonter.png */,
-				9B156A9C19776FA300C6F5AB /* Menu.png */,
 				9B156A9D19776FA300C6F5AB /* yellowmonter.png */,
 				9B156A6C19776EA400C6F5AB /* SpaceInvaders-Info.plist */,
 				9B156A6D19776EA400C6F5AB /* InfoPlist.strings */,
@@ -251,8 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B08A4691980215C00044F18 /* Menu.png in Resources */,
 				9B156A7D19776EA400C6F5AB /* Images.xcassets in Resources */,
-				9B156AA119776FA300C6F5AB /* Menu.png in Resources */,
 				9B156A6F19776EA400C6F5AB /* InfoPlist.strings in Resources */,
 				9B156A9F19776FA300C6F5AB /* bullet.png in Resources */,
 				9B156AA219776FA300C6F5AB /* yellowmonter.png in Resources */,
@@ -486,6 +486,7 @@
 				9B156A9519776EA400C6F5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B156A9619776EA400C6F5AB /* Build configuration list for PBXNativeTarget "SpaceInvadersTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				9B156A9819776EA400C6F5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
