@@ -19,7 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +37,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)dissmiss:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (IBAction)signup:(UIButton *)sender {
     NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -64,4 +67,6 @@
     }
     
 }
+
+
 @end

@@ -7,13 +7,14 @@
 //
 
 #import "EditFriendsViewController.h"
-
+#import "MSCellAccessory.h"
 @interface EditFriendsViewController ()
 
 @end
 
 @implementation EditFriendsViewController
 
+UIColor *disclosureColor;
 
 - (void)viewDidLoad
 {
@@ -31,6 +32,7 @@
         }
     }];
     self.currentUser = [PFUser currentUser];
+    disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -72,10 +74,11 @@
     cell.textLabel.text = user.username;
     
     if([self isFriend:user]){
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+         cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_CHECKMARK color:disclosureColor];
     }
     else{
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.accessoryView = nil;
+        
     }
     return cell;
 }
@@ -98,7 +101,7 @@
     // else add them in a friendlist
     
     if([self isFriend:user]){
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.accessoryView = nil;
         for(PFUser *friend in self.friends){
             if([friend.objectId isEqualToString:user.objectId])
                 [self.friends removeObject:friend];
@@ -107,8 +110,7 @@
         }
     }
     else{
-        
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_CHECKMARK color:disclosureColor];
         [self.friends addObject:user];
         [friendsRelation addObject:user];
     }

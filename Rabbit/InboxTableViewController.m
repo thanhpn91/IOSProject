@@ -9,7 +9,7 @@
 #import "InboxTableViewController.h"
 #import "ImageViewController.h"
 #import <Parse/Parse.h>
-
+#import "MSCellAccessory.h"
 @interface InboxTableViewController ()
 
 @end
@@ -27,23 +27,15 @@
     }else{
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(retrieveMessages) forControlEvents:UIControlEventValueChanged];
 }
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
-    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
-    [query orderByDescending:@"createdAt"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if(error){
-            NSLog(@"Error: %@, %@",error,[error userInfo]);
-        }
-        else{
-            self.messages = objects;
-            [self.tableView reloadData];
-            NSLog(@"Retrieved %lu messages",(unsigned long)[self.messages count]);
-        }
-    }];
+    [self.navigationController.navigationBar setHidden:NO];
+    [self retrieveMessages];
     
 }
 //pragma mark - Table view data source
@@ -68,6 +60,8 @@
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
     cell.textLabel.text = [self.selectedMessage objectForKey:@"senderName"];
     
+    UIColor *disclosureColor = [UIColor colorWithRed:0.400 green:0.570 blue:0.818 alpha:1.0];
+    cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_DISCLOSURE_INDICATOR color:disclosureColor];
     NSString *fileType = [self.selectedMessage objectForKey:@"fileType"];
     if([fileType isEqualToString:@"image"]){
         cell.imageView.image = [UIImage imageNamed:@"icon_image"];
@@ -90,7 +84,9 @@
         NSURL *fileUrl = [NSURL URLWithString:videoFile.url];
         self.moivePlayer.contentURL = fileUrl;
         [self.moivePlayer prepareToPlay];
-        //[self.moivePlayer thumbnailImageAtTime:0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+        [self.moivePlayer thumbnailImageAtTime:0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+        
+        
         //Add it the view controller so we can see it
         [self.view addSubview:self.moivePlayer.view];
         [self.moivePlayer setFullscreen:YES animated:YES];
@@ -123,5 +119,25 @@
         imageViewController.message =self.selectedMessage;
         
     }
+}
+
+#pragma helped method
+- (void)retrieveMessages {
+    PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
+    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
+    [query orderByDescending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(error){
+            NSLog(@"Error: %@, %@",error,[error userInfo]);
+        }
+        else{
+            self.messages = objects;
+            [self.tableView reloadData];
+            NSLog(@"Retrieved %lu messages",(unsigned long)[self.messages count]);
+        }
+        if([self.refreshControl isRefreshing]){
+            [self.refreshControl endRefreshing];
+        }
+    }];
 }
 @end
