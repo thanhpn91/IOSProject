@@ -1,3 +1,3 @@
 IOSProject
 ==========
-Check out wiki for description of each project
+The screenshots of Rabbit app are in the image folder
