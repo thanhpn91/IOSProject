@@ -1,0 +1,12 @@
+The descriptions of Rabbit project
+
+The main function of the application allows user to send the message which is a video or an image to their friend
+and the messages only last about 10s after user views the message for the first time. It is totally secure when you want
+to send your friend a private picture or video just for view one-time. Another features of the application are :
+
++ User registrations.
++ Adding Friends + Remove Friends
++ View messages in the Inbox Tab.
++ Take a videos or pictures,and choose the recipients
++ All user information and message are stored in cloud at Parse.com
++ I use Parse.com at the back-end services. So i also implement some techniques such as 
