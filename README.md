@@ -1,3 +1,3 @@
 IOSProject
 ==========
-The screenshots of Rabbit app are in the image folder
+The description about each application is written in Appname-"README.md" files
