@@ -9,4 +9,5 @@ to send your friend a private picture or video just for view one-time. Another f
 + View messages in the Inbox Tab.
 + Take a videos or pictures,and choose the recipients
 + All user information and message are stored in cloud at Parse.com
-+ I use Parse.com at the back-end services. So i also implement some techniques such as 
++ I use Parse.com at the back-end services. So i also implement some techniques such as Back-End services. It's support
+some techniques like, doing background work, grand central dispatch and dashboard reporting.
